@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="cartao">Conteúdo do cartão 1</div>
+  <div class="cartao">Conteúdo do cartão 2</div>
+  </div>
+.container {
+  display: flex;
+  flex-wrap: wrap; /* Permite que os cartões quebrem para a próxima linha se necessário */
+  justify-content: center; /* Centraliza os cartões horizontalmente */
+}
+
+.cartao {
+  background-color: #f0f0f0; /* Cor de fundo dos cartões (opcional) */
+  padding: 20px;
+  margin: 10px;
+  border-radius: 5px;
+  box-sizing: border-box; /* Inclui padding e border no cálculo da largura */
+
+  /* Formatação específica para tablets */
+  @media (min-width: 768px) {
+    flex: 1 1 calc(50% - 3rem); /* Ocupa metade da largura disponível com margem */
+    max-width: calc(50% - 3rem); /* Garante que os cartões não excedam a largura máxima */
+  }
+}
